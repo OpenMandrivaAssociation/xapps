@@ -6,7 +6,7 @@
 
 Name:           xapps
 Version:        1.0.2
-Release:        1
+Release:        2
 Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
