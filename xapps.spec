@@ -22,7 +22,7 @@ BuildRequires:  gobject-introspection-devel
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  libgnomekbd-devel
-Requires:       python-gobject
+Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
 Requires:       fpaste
