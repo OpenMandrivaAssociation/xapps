@@ -5,14 +5,14 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           xapps
-Version:        1.0.2
+Version:        1.4.5
 Release:        2
 Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
 URL:            https://github.com/linuxmint
 Source0:        %url/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Source1:        %url/flags/archive/1.0.1.tar.gz#/flags-1.0.1.tar.gz
+Source1:        %url/flags/archive/1.0.2.tar.gz#/flags-1.0.2.tar.gz
 Group:          Development/Other
 
 BuildRequires:  gnome-common
@@ -22,6 +22,9 @@ BuildRequires:  gobject-introspection-devel
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  libgnomekbd-devel
+BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:	vala-devel
+BuildRequires:	meson
 Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
@@ -70,26 +73,28 @@ tar -xf %{SOURCE1} -C files/usr/share --strip 3
 rm files/usr/share/format
 
 %build
-NOCONFIGURE=1 ./autogen.sh
-%configure2_5x
-sed -i -e 's! -shared ! -Wl,--as-needed\0!g' libtool
+%meson
 
-%make V=1
+%meson_build
 
 
 %install
-%makeinstall_std
+%meson_install
 
 find %{buildroot} -name '*.la' -delete
 
-%files
+%find_lang xapp
+
+%files -f xapp.lang
 %doc README.md COPYING
 %{_bindir}/pastebin
 %{_bindir}/upload-system-info
 %{_bindir}/xfce4-set-wallpaper
 %{_datadir}/iso-flag-png/
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
-%{_datadir}/icons/hicolor/scalable/actions/xapp-*-symbolic.svg
+%{_datadir}/icons/hicolor/scalable/*/*.svg
+%{python3_sitearch}/gi/overrides/XApp.py
+%{python2_sitearch}/gi/overrides/XApp.py
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
@@ -103,4 +108,6 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/libxapp.so
 %{_libdir}/pkgconfig/xapp.pc
 %{_datadir}/gir-1.0/XApp-1.0.gir
-
+%{_datadir}/glade/catalogs/xapp-glade-catalog.xml
+%{_datadir}/vala/vapi/xapp.vapi
+%{_datadir}/vala/vapi/xapp.deps
