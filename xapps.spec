@@ -11,8 +11,8 @@ Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
 URL:            https://github.com/linuxmint
-Source0:        %url/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Source1:        %url/flags/archive/1.0.2.tar.gz#/flags-1.0.2.tar.gz
+Source0:        %url/%{name}/archive/%{version}.tar.gz
+Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
 BuildRequires:  gnome-common
