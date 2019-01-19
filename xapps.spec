@@ -95,8 +95,10 @@ find %{buildroot} -name '*.la' -delete
 %{_datadir}/iso-flag-png/
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
 %{_datadir}/icons/hicolor/scalable/*/*.svg
-%{python3_sitearch}/gi/overrides/XApp.py
-%{python2_sitearch}/gi/overrides/XApp.py
+%{python3_sitearch}/gi/overrides/XApp.py*
+%{python2_sitearch}/gi/overrides/XApp.py*
+%{python3_sitearch}/gi/overrides/__pycache__
+%{python2_sitearch}/gi/overrides/__pycache__
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
