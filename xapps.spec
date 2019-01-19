@@ -98,7 +98,6 @@ find %{buildroot} -name '*.la' -delete
 %{python3_sitearch}/gi/overrides/XApp.py*
 %{python2_sitearch}/gi/overrides/XApp.py*
 %{python3_sitearch}/gi/overrides/__pycache__
-%{python2_sitearch}/gi/overrides/__pycache__
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
