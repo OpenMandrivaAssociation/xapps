@@ -25,6 +25,8 @@ BuildRequires:  libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
 BuildRequires:	meson
+BuildRequires:	python-gi
+BuildRequires:	python2-gi
 Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
