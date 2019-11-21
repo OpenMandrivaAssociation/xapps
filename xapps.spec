@@ -5,8 +5,8 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           xapps
-Version:        1.4.5
-Release:        2
+Version:        1.6.1
+Release:        1
 Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
@@ -15,6 +15,7 @@ Source0:        %url/%{name}/archive/%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
+BuildRequires:  meson
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  intltool
@@ -68,7 +69,7 @@ GObject Introspection interface description for %{name}.
 %prep
 %setup -q
 
-%apply_patches
+%autopatch -p1
 
 tar -xf %{SOURCE1} -C files/usr/share --strip 3
 
@@ -78,7 +79,6 @@ rm files/usr/share/format
 %meson
 
 %meson_build
-
 
 %install
 %meson_install
