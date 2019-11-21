@@ -98,6 +98,9 @@ find %{buildroot} -name '*.la' -delete
 %{python3_sitearch}/gi/overrides/XApp.py*
 %{python2_sitearch}/gi/overrides/XApp.py*
 %{python3_sitearch}/gi/overrides/__pycache__
+%{_libexecdir}/xapps/mate-panel/*
+%{_datadir}/dbus-1/services/org.mate.panel.applet.MateXAppStatusAppletFactory.service
+%{_datadir}/mate-panel/applets/org.x.MateXAppStatusApplet.mate-panel-applet
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
