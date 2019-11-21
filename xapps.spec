@@ -10,8 +10,8 @@ Release:        1
 Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
-URL:            https://github.com/linuxmint
-Source0:        %url/%{name}/archive/%{version}.tar.gz
+URL:            https://github.com/linuxmint/xapps/
+Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
