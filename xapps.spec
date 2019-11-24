@@ -5,7 +5,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           xapps
-Version:        1.6.1
+Version:        1.6.2
 Release:        1
 Summary:        Common files for XApp desktop apps
 
@@ -15,7 +15,6 @@ Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{name}-%{
 Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
-BuildRequires:  meson
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  intltool
