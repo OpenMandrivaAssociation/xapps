@@ -5,7 +5,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           xapps
-Version:        1.6.4
+Version:        1.6.6
 Release:        1
 Summary:        Common files for XApp desktop apps
 
