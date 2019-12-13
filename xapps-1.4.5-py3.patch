@@ -1,0 +1,11 @@
+--- a/pygobject/meson.build
++++ b/pygobject/meson.build
+@@ -3,7 +3,7 @@
+     required: true,
+ )
+ 
+-foreach exec : ['python2', 'python3']
++foreach exec : ['python3']
+     r = run_command(exec, '-c', 'import gi;print(gi._overridesdir)')
+ 
+     if r.returncode() == 0
