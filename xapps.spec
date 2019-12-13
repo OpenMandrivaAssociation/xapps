@@ -13,6 +13,7 @@ License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
 Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
+Patch0:         xapps-1.4.5-py3.patch
 Group:          Development/Other
 
 BuildRequires:  gnome-common
@@ -26,7 +27,6 @@ BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
 BuildRequires:	meson
 BuildRequires:	python-gi
-BuildRequires:	python2-gi
 Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
@@ -95,7 +95,6 @@ find %{buildroot} -name '*.la' -delete
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{python3_sitearch}/gi/overrides/XApp.py*
-%{python2_sitearch}/gi/overrides/XApp.py*
 %{python3_sitearch}/gi/overrides/__pycache__
 %{_libexecdir}/xapps/mate-xapp-status-applet.py
 %{_libexecdir}/xapps/applet_constants.py
