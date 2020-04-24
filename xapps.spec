@@ -13,7 +13,7 @@ License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
 Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
-Patch0:         xapps-1.4.5-py3.patch
+#Patch0:         xapps-1.4.5-py3.patch
 Group:          Development/Other
 
 BuildRequires:  gnome-common
@@ -70,7 +70,10 @@ GObject Introspection interface description for %{name}.
 
 %autopatch -p1
 
-tar -xf %{SOURCE1} -C files/usr/share --strip 3
+#tar -xf %{SOURCE1} -C files/usr/share --strip 3
+mkdir -p files/usr/share
+cd files/usr/share
+tar xzvf %{SOURCE1}
 
 rm files/usr/share/format
 
