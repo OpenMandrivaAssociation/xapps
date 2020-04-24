@@ -75,7 +75,8 @@ mkdir -p files/usr/share
 cd files/usr/share
 tar xzvf %{SOURCE1}
 
-rm files/usr/share/format
+#rm files/usr/share/format
+rm flags-1.0.2/debian/source/format
 
 %build
 %meson
