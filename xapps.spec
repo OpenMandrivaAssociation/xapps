@@ -16,6 +16,7 @@ Source1:        %url/flags/archive/1.0.2.tar.gz
 #Patch0:         xapps-1.4.5-py3.patch
 Group:          Development/Other
 
+BuildRequires:  cmake
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  intltool
