@@ -73,12 +73,12 @@ GObject Introspection interface description for %{name}.
 %autopatch -p1
 
 #tar -xf %{SOURCE1} -C files/usr/share --strip 3
-mkdir -p files/usr/share
-cd files/usr/share
+#mkdir -p files/usr/share
+#cd files/usr/share
 tar xzvf %{SOURCE1}
 
-#rm files/usr/share/format
-rm flags-1.0.2/debian/source/format
+rm files/usr/share/format
+#rm flags-1.0.2/debian/source/format
 
 %build
 %meson
