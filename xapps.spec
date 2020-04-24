@@ -73,8 +73,8 @@ GObject Introspection interface description for %{name}.
 %autopatch -p1
 
 #tar -xf %{SOURCE1} -C files/usr/share --strip 3
-mkdir -p usr/share/iso-flag-png
-cd usr/share/iso-flag-png
+mkdir -p %{buildroot}/usr/share/iso-flag-png
+cd %{buildroot}/usr/share/iso-flag-png
 tar xzvf %{SOURCE1}
 
 #rm files/usr/share/format
