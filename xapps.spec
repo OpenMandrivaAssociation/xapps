@@ -5,7 +5,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           xapps
-Version:        1.8.2
+Version:        1.8.6
 Release:        1
 Summary:        Common files for XApp desktop apps
 
@@ -70,10 +70,6 @@ GObject Introspection interface description for %{name}.
 
 %autopatch -p1
 
-tar -xf %{SOURCE1} -C files/usr/share --strip 3
-
-rm files/usr/share/format
-
 %build
 %meson
 
@@ -81,6 +77,8 @@ rm files/usr/share/format
 
 %install
 %meson_install
+tar -xf %{SOURCE1} -C %{buildroot}%{_datadir} --strip 3        
+rm %{buildroot}%{_datadir}/format
 
 find %{buildroot} -name '*.la' -delete
 
