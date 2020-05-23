@@ -16,6 +16,7 @@ Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
 BuildRequires:  gnome-common
+BuildRequires:  pkgconfig(dbusmenu-gtk3-0.4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  intltool
 BuildRequires:  gobject-introspection-devel
