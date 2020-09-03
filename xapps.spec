@@ -68,7 +68,7 @@ GObject Introspection interface description for %{name}.
 %prep
 %setup -q
 
-%autopatch -p1
+%autopatch -p1 xaap-%{version}
 
 %build
 %meson
