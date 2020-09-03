@@ -66,7 +66,7 @@ Obsoletes:      %{_lib}xapps-gir1.0 < 1.0.2-2
 GObject Introspection interface description for %{name}.
 
 %prep
-%setup -qn  xaap-%{version}
+%setup -qn  xapp-%{version}
 
 %autopatch -p1
 
