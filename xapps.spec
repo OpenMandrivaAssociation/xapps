@@ -1,3 +1,4 @@
+%define oname           xapp
 %define major           1
 %define girmajor        1.0
 %define libname         %mklibname xapp %{major}
@@ -11,7 +12,7 @@ Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
-Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{oname}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
