@@ -105,7 +105,7 @@ find %{buildroot} -name '*.la' -delete
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
-%{_libdir}/libxapp.so.%{major}.*
+#{_libdir}/libxapp.so.%{major}.*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/XApp-1.0.typelib
