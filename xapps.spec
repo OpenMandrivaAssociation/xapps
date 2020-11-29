@@ -99,13 +99,14 @@ find %{buildroot} -name '*.la' -delete
 %{_libexecdir}/xapps/applet_constants.py
 %{_libexecdir}/xapps/sn-watcher/xapp-sn-watcher
 %{_sysconfdir}/xdg/autostart/xapp-sn-watcher.desktop
+%{_sysconfdir}/X11/Xsession.d/80xapp-gtk3-module
 %{_datadir}/dbus-1/services/org.mate.panel.applet.MateXAppStatusAppletFactory.service
 %{_datadir}/mate-panel/applets/org.x.MateXAppStatusApplet.mate-panel-applet
 %{_datadir}/dbus-1/services/org.x.StatusNotifierWatcher.service
 
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
-#{_libdir}/libxapp.so.%{major}.*
+%{_libdir}/libxapp.so.%{girmajor}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/XApp-1.0.typelib
@@ -113,6 +114,7 @@ find %{buildroot} -name '*.la' -delete
 %files -n %{develname}
 %{_includedir}/*
 %{_libdir}/libxapp.so
+%{_libdir}/gtk-3.0/modules/libxapp-gtk3-module.so
 %{_libdir}/pkgconfig/xapp.pc
 %{_datadir}/gir-1.0/XApp-1.0.gir
 %{_datadir}/glade/catalogs/xapp-glade-catalog.xml
