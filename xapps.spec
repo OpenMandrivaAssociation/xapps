@@ -101,7 +101,7 @@ find %{buildroot} -name '*.la' -delete
 %{_libexecdir}/xapps/applet_constants.py
 %{_libexecdir}/xapps/sn-watcher/xapp-sn-watcher
 %{_sysconfdir}/xdg/autostart/xapp-sn-watcher.desktop
-#{_sysconfdir}/X11/Xsession.d/80xapp-gtk3-module
+%{_sysconfdir}/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh
 %{_datadir}/dbus-1/services/org.mate.panel.applet.MateXAppStatusAppletFactory.service
 %{_datadir}/mate-panel/applets/org.x.MateXAppStatusApplet.mate-panel-applet
 %{_datadir}/dbus-1/services/org.x.StatusNotifierWatcher.service
