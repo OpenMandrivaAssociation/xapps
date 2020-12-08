@@ -5,8 +5,8 @@
 %define develname       %mklibname xapp -d
 %define girname         %mklibname xapp-gir %{girmajor}
 
-Name:           xapps
-Version:        2.0.0
+Name:           %{oname}
+Version:        2.0.2
 Release:        1
 Summary:        Common files for XApp desktop apps
 
@@ -32,6 +32,8 @@ Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
 Requires:       fpaste
+
+Obsoletes:      xapps < 2.0.1
 
 %description
 This package includes files that are shared between several XApp
