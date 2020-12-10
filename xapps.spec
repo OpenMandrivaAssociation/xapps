@@ -14,6 +14,7 @@ License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
 Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{oname}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
+Patch0:         xapp-2.0.3-fix-wrong-location-of-bin-bash-openmandriva.patch
 Group:          Development/Other
 
 BuildRequires:  gnome-common
