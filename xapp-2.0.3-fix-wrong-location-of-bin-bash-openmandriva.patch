@@ -1,9 +1,0 @@
-diff -uraN xapp-2.0.3/data/80xapp-gtk3-module.sh omv-xapp-2.0.3/data/80xapp-gtk3-module.sh
---- xapp-2.0.3/data/80xapp-gtk3-module.sh	2020-12-10 13:16:57.000000000 +0100
-+++ omv-xapp-2.0.3/data/80xapp-gtk3-module.sh	2020-12-10 15:48:22.326205104 +0100
-@@ -1,4 +1,4 @@
--#!/usr/bin/bash
-+#!/bin/bash
- # This file is sourced by xinit(1) or a display manager's Xsession, not executed.
- 
- if [ -z "$GTK_MODULES" ] ; then
