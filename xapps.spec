@@ -7,7 +7,7 @@
 
 Name:           %{oname}
 Version:        2.0.6
-Release:        1
+Release:        2
 Summary:        Common files for XApp desktop apps
 
 License:        LGPLv2+
@@ -32,6 +32,7 @@ Requires:       python-gi
 Requires:       inxi
 Requires:       xdg-utils
 Requires:       fpaste
+Requires:       %{libname} = %{version}-%{release}
 
 Obsoletes:      xapps < 2.0.1
 
@@ -42,6 +43,7 @@ apps (i18n files and configuration schemas).
 %package -n %{libname}
 Group:          System/Libraries
 Summary:        JavaScript bindings based on %{name}
+Requires:       %{name} = %{version}-%{release}
 Obsoletes:      %{_lib}xapps0 < 1.0.2-2
 
 %description -n %{libname}
