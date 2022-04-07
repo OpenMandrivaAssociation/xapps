@@ -98,7 +98,6 @@ find %{buildroot} -name '*.la' -delete
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{python3_sitearch}/gi/overrides/XApp.py*
-%{python3_sitearch}/gi/overrides/__pycache__
 %{_libexecdir}/xapps/mate-xapp-status-applet.py
 %{_libexecdir}/xapps/applet_constants.py
 %{_libexecdir}/xapps/sn-watcher/xapp-sn-watcher
