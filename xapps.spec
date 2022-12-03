@@ -23,6 +23,7 @@ BuildRequires:  intltool
 BuildRequires:  gobject-introspection-devel
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
