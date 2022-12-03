@@ -17,13 +17,14 @@ Source1:        %url/flags/archive/1.0.2.tar.gz
 Group:          Development/Other
 
 BuildRequires:  gnome-common
+BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(dbusmenu-gtk3-0.4)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  intltool
 BuildRequires:  gobject-introspection-devel
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:  libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
