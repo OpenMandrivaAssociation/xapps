@@ -6,7 +6,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        2.2.15
+Version:        2.4.2
 Release:        1
 Summary:        Common files for XApp desktop apps
 
