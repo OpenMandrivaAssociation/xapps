@@ -103,7 +103,7 @@ find %{buildroot} -name '*.la' -delete
 %{python3_sitearch}/gi/overrides/XApp.py*
 %{_libexecdir}/xapps/mate-xapp-status-applet.py
 %{_libexecdir}/xapps/applet_constants.py
-%{_libexecdir}/xapps/sn-watcher/xapp-sn-watcher
+#{_libexecdir}/xapps/sn-watcher/xapp-sn-watcher
 %{_sysconfdir}/xdg/autostart/xapp-sn-watcher.desktop
 %{_sysconfdir}/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh
 %{_datadir}/dbus-1/services/org.mate.panel.applet.MateXAppStatusAppletFactory.service
