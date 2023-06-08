@@ -6,15 +6,14 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        2.4.2
-Release:        2
+Version:        2.6.1
+Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
 Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{oname}-%{version}.tar.gz
 Source1:        %url/flags/archive/1.0.2.tar.gz
-Patch0:         https://patch-diff.githubusercontent.com/raw/linuxmint/xapp/pull/161.patch
 
 
 BuildRequires:  gnome-common
