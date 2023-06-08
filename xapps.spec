@@ -36,6 +36,7 @@ Requires:       inxi
 Requires:       xdg-utils
 Requires:       fpaste
 Requires:       %{libname} = %{version}-%{release}
+Requires:       %{girname} = %{version}-%{release}
 
 Obsoletes:      xapps < 2.0.1
 
@@ -97,6 +98,7 @@ find %{buildroot} -name '*.la' -delete
 %{_bindir}/pastebin
 %{_bindir}/upload-system-info
 %{_bindir}/xfce4-set-wallpaper
+%{_bindir}/xapp-gpu-offload
 %{_datadir}/iso-flag-png/
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
 %{_datadir}/icons/hicolor/scalable/*/*.svg
@@ -113,6 +115,7 @@ find %{buildroot} -name '*.la' -delete
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
 %{_libdir}/libxapp.so.%{girmajor}*
+%{_libdir}/xapps/xapp-sn-watcher
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/XApp-1.0.typelib
