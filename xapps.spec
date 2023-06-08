@@ -1,6 +1,6 @@
 %define oname           xapp
 %define major           1
-%define girmajor        2.4
+%define girmajor        2.6
 %define libname         %mklibname xapp %{major}
 %define develname       %mklibname xapp -d
 %define girname         %mklibname xapp-gir %{girmajor}
