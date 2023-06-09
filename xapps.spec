@@ -7,7 +7,7 @@
 
 Name:           %{oname}
 Version:        2.6.1
-Release:        1
+Release:        2
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
@@ -38,7 +38,7 @@ Requires:       fpaste
 Requires:       %{libname} = %{version}-%{release}
 Requires:       %{girname} = %{version}-%{release}
 
-Obsoletes:      xapps < 2.0.1
+Obsoletes:      xapps < %{EVRD}
 
 %description
 This package includes files that are shared between several XApp
@@ -48,7 +48,7 @@ apps (i18n files and configuration schemas).
 Group:          System/Libraries
 Summary:        JavaScript bindings based on %{name}
 Requires:       %{name} = %{version}-%{release}
-Obsoletes:      %{_lib}xapps0 < 1.0.2-2
+Obsoletes:      %{_lib}xapps0 < %{EVRD}
 
 %description -n %{libname}
 This package contains JavaScript bindings based on %{name}.
@@ -60,7 +60,7 @@ Requires:       %{libname} = %{version}-%{release}
 Requires:       %{girname} = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
 Provides:       lib%{name}-devel = %{version}-%{release}
-Obsoletes:      %{_lib}xapps-devel < 1.0.2-2
+Obsoletes:      %{_lib}xapps-devel < %{EVRD}
 
 %description -n %{develname}
 Files for development with %{name}.
@@ -68,8 +68,8 @@ Files for development with %{name}.
 %package -n %{girname}
 Summary:        GObject Introspection interface description for %{name}
 Group:          System/Libraries
-Requires:       %{libname} = %{version}-%{release}
-Obsoletes:      %{_lib}xapps-gir1.0 < %{version}-%{release}
+#Requires:       %{libname} = %{version}-%{release}
+Obsoletes:      %{_lib}xapps-gir1.0 < %{EVRD}
 
 %description -n %{girname}
 GObject Introspection interface description for %{name}.
