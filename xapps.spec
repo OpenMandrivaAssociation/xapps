@@ -1,13 +1,14 @@
 %define oname           xapp
 %define major           1
 %define girmajor        2.8
-%define libname         %mklibname xapp %{major}
+%define libname         %mklibname xapp
+%define oldlibname      %mklibname xapp 1
 %define develname       %mklibname xapp -d
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
 Version:        2.8.4
-Release:        1
+Release:        2
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
@@ -49,6 +50,9 @@ Group:          System/Libraries
 Summary:        JavaScript bindings based on %{name}
 Requires:       %{name} = %{version}-%{release}
 Obsoletes:      %{_lib}xapps0 < %{EVRD}
+Obsoletes:      %{_lib}xapps0 < %{EVRD}
+Obsoletes:      %{_lib}xapp1 < %{EVRD}
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package contains JavaScript bindings based on %{name}.
