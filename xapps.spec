@@ -8,7 +8,7 @@
 
 Name:           %{oname}
 Version:        2.8.4
-Release:        3
+Release:        4
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
@@ -74,6 +74,7 @@ Summary:        GObject Introspection interface description for %{name}
 Group:          System/Libraries
 #Requires:       %{libname} = %{version}-%{release}
 Obsoletes:      %{_lib}xapps-gir1.0 < %{EVRD}
+Obsoletes:      %{_lib}xapp-gir2.6
 Obsoletes:      %{_lib}xapp-gir2.8 < %{EVRD}
 
 %description -n %{girname}
