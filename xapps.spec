@@ -7,8 +7,8 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        2.8.4
-Release:        4
+Version:        2.8.5
+Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
