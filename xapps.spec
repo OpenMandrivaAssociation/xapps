@@ -7,7 +7,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        2.8.7
+Version:        2.8.9
 Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
@@ -31,8 +31,10 @@ BuildRequires:  libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
 BuildRequires:	meson
+BuildRequires:  mold
 BuildRequires:	python-gi
 Requires:       python-gi
+Requires:       python-gobject3
 Requires:       inxi
 Requires:       xdg-utils
 Requires:       fpaste
@@ -81,11 +83,12 @@ Obsoletes:      %{_lib}xapp-gir2.8 < %{EVRD}
 GObject Introspection interface description for %{name}.
 
 %prep
-%setup -qn  xapp-%{version}
-
-%autopatch -p1
+%autosetup -n  xapp-%{version} -p1
 
 %build
+%global optflags %{optflags} -fuse-ld=mold
+export CC=gcc
+export CXX=g++
 %meson
 
 %meson_build
