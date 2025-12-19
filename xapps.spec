@@ -1,21 +1,21 @@
 %define oname           xapp
 %define major           1
-%define girmajor        2.8
+%define girmajor        3.2
 %define libname         %mklibname xapp
 %define oldlibname      %mklibname xapp 1
 %define develname       %mklibname xapp -d
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        2.8.9
+Version:        3.2.1
 Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
 URL:            https://github.com/linuxmint/xapps/
 Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{oname}-%{version}.tar.gz
-Source1:        %url/flags/archive/1.0.2.tar.gz
 
+BuildSystem:    meson
 
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(cairo)
@@ -30,7 +30,6 @@ BuildRequires:  pkgconfig(gmodule-2.0)
 BuildRequires:  libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
-BuildRequires:	meson
 BuildRequires:  mold
 BuildRequires:	python-gi
 Requires:       python-gi
@@ -74,30 +73,22 @@ Files for development with %{name}.
 %package -n %{girname}
 Summary:        GObject Introspection interface description for %{name}
 Group:          System/Libraries
-#Requires:       %{libname} = %{version}-%{release}
+
 Obsoletes:      %{_lib}xapps-gir1.0 < %{EVRD}
-Obsoletes:      %{_lib}xapp-gir2.6
+Obsoletes:      %{_lib}xapp-gir2.6 < %{EVRD}
 Obsoletes:      %{_lib}xapp-gir2.8 < %{EVRD}
 
 %description -n %{girname}
 GObject Introspection interface description for %{name}.
 
-%prep
-%autosetup -n  xapp-%{version} -p1
 
-%build
+%conf -p
 %global optflags %{optflags} -fuse-ld=mold
 export CC=gcc
 export CXX=g++
-%meson
 
-%meson_build
 
-%install
-%meson_install
-tar -xf %{SOURCE1} -C %{buildroot}%{_datadir} --strip 3        
-rm %{buildroot}%{_datadir}/format
-
+%install -a
 find %{buildroot} -name '*.la' -delete
 
 %find_lang xapp
@@ -108,7 +99,6 @@ find %{buildroot} -name '*.la' -delete
 %{_bindir}/upload-system-info
 %{_bindir}/xfce4-set-wallpaper
 %{_bindir}/xapp-gpu-offload
-%{_datadir}/iso-flag-png/
 %{_datadir}/glib-2.0/schemas/org.x.apps.*.xml
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{python3_sitearch}/gi/overrides/XApp.py*
