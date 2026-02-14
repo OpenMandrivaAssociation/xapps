@@ -32,6 +32,7 @@ BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
 BuildRequires:	mold
 BuildRequires:	python%{pyver}dist(pygobject)
+BuildRequires:	typelib(MatePanelApplet)
 Requires:	python%{pyver}dist(pygobject)
 Requires:	python-gobject3
 Requires:	inxi
