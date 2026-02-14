@@ -7,7 +7,7 @@
 %define girname         %mklibname xapp-gir %{girmajor}
 
 Name:           %{oname}
-Version:        3.2.1
+Version:        3.2.2
 Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
@@ -17,28 +17,28 @@ Source0:        https://github.com/linuxmint/xapps/archive/%{version}/%{oname}-%
 
 BuildSystem:    meson
 
-BuildRequires:  gnome-common
-BuildRequires:  pkgconfig(cairo)
-BuildRequires:  pkgconfig(dbusmenu-gtk3-0.4)
-BuildRequires:  pkgconfig(glib-2.0)
-BuildRequires:  intltool
-BuildRequires:  gobject-introspection-devel
-BuildRequires:  pkgconfig(x11)
-BuildRequires:  pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:  pkgconfig(gmodule-2.0)
-BuildRequires:  libgnomekbd-devel
+BuildRequires:	gnome-common
+BuildRequires:	pkgconfig(cairo)
+BuildRequires:	pkgconfig(dbusmenu-gtk3-0.4)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	intltool
+BuildRequires:	gobject-introspection-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
+BuildRequires:	pkgconfig(gmodule-2.0)
+BuildRequires:	libgnomekbd-devel
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
-BuildRequires:  mold
-BuildRequires:	python-gi
-Requires:       python-gi
-Requires:       python-gobject3
-Requires:       inxi
-Requires:       xdg-utils
-Requires:       fpaste
-Requires:       %{libname} = %{version}-%{release}
-Requires:       %{girname} = %{version}-%{release}
+BuildRequires:	mold
+BuildRequires:	python%{pyver}dist(pygobject)
+Requires:	python%{pyver}dist(pygobject)
+Requires:	python-gobject3
+Requires:	inxi
+Requires:	xdg-utils
+Requires:	fpaste
+Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
 
 Obsoletes:      xapps < %{EVRD}
 
