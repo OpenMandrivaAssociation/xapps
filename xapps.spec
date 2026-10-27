@@ -6,8 +6,12 @@
 %define develname       %mklibname xapp -d
 %define girname         %mklibname xapp-gir %{girmajor}
 
+# The mate status applet imports this typelib. mate-panel is in extra,
+# and this package is built for main, so the dependency cannot be satisfied here.
+%global __requires_exclude ^typelib\\(MatePanelApplet\\).*
+
 Name:           %{oname}
-Version:        3.2.2
+Version:        3.2.3
 Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
