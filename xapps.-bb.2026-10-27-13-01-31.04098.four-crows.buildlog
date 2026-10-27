@@ -1,0 +1,661 @@
+Reading /var/tmp/rpm-tmp.KYIFJm
+Executing(mkbuilddir): /bin/sh -e /var/tmp/rpm-tmp.mmfOfD
+Creating(rpmbuild.env): /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/rpmbuild.env
+  RPM_SOURCE_DIR="/home/c137/workspace1/xapps"
+  RPM_BUILD_DIR="/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build"
+  RPM_OPT_FLAGS="-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold"
+  RPM_LD_FLAGS="-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2  -Wl,--no-undefined -flto "
+  RPM_ARCH="x86_64"
+  RPM_OS="linux"
+  RPM_BUILD_NCPUS="8"
+  RPM_SPECPARTS_DIR="/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/SPECPARTS"
+  export RPM_SOURCE_DIR RPM_BUILD_DIR RPM_OPT_FLAGS RPM_ARCH RPM_OS RPM_BUILD_NCPUS RPM_SPECPARTS_DIR RPM_LD_FLAGS
+  RPM_DOC_DIR="/usr/share/doc"
+  export RPM_DOC_DIR
+  RPM_PACKAGE_NAME="xapp"
+  RPM_PACKAGE_VERSION="3.2.3"
+  RPM_PACKAGE_RELEASE="1"
+  export RPM_PACKAGE_NAME RPM_PACKAGE_VERSION RPM_PACKAGE_RELEASE
+  LANG=C.UTF-8
+  export LANG
+  unset CDPATH DISPLAY ||:
+  unset DEBUGINFOD_URLS ||:
+  unset RPM_CONFIG_DIR ||:
+  RPM_BUILD_ROOT="/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT"
+  export RPM_BUILD_ROOT
+  
+  PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/lib64/pkgconfig:/usr/share/pkgconfig"
+  export PKG_CONFIG_PATH
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.whcKwy
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ rm -rf xapp-3.2.3
++ /usr/bin/rpmuncompress -x -C xapp-3.2.3 /home/c137/workspace1/xapps/xapp-3.2.3.tar.gz
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd xapp-3.2.3
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%generate_buildrequires): /bin/sh -e /var/tmp/rpm-tmp.0fcPgX
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ cd xapp-3.2.3
++ echo meson
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%conf): /bin/sh -e /var/tmp/rpm-tmp.V6kkgX
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ cd xapp-3.2.3
++ export CC=gcc
++ CC=gcc
++ export CXX=g++
++ CXX=g++
++ CC=gcc
++ export CC
++ CXX=g++
++ export CXX
++ CFLAGS='-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold'
++ export CFLAGS
++ CXXFLAGS='-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold'
++ export CXXFLAGS
++ FFLAGS='-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -I/usr/lib64/gfortran/modules'
++ export FFLAGS
++ FCFLAGS='-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -I/usr/lib64/gfortran/modules'
++ export FCFLAGS
++ LDFLAGS='-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2  -Wl,--no-undefined -flto '
++ export LDFLAGS
++ LT_SYS_LIBRARY_PATH=/usr/lib64:
++ export LT_SYS_LIBRARY_PATH
++ CROSSCOMPILE='--target=x86_64-openmandriva-linux-gnu --build=x86_64-openmandriva-linux-gnu'
++ export CROSSCOMPILE
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ export LC_ALL=en_US.UTF-8
++ LC_ALL=en_US.UTF-8
++ /usr/bin/meson setup --buildtype=plain --prefix=/usr --libdir=/usr/lib64 --libexecdir=/usr/libexec --bindir=/usr/bin --sbindir=/usr/bin --includedir=/usr/include --datadir=/usr/share --mandir=/usr/share/man --infodir=/usr/share/info --localedir=/usr/share/locale --sysconfdir=/etc --localstatedir=/var --sharedstatedir=/usr/com --wrap-mode=nodownload --auto-features=enabled . build
+The Meson build system
+Version: 1.12.1
+Source dir: /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3
+Build dir: /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build
+Build type: native build
+Project name: xapp
+Project version: 3.2.3
+C compiler for the host machine: gcc (gcc 16.2.0 "gcc (GCC) 16.2.0 20260807 (OpenMandriva)")
+C linker for the host machine: gcc ld.mold 2.42.0
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.8
+Run-time dependency dbus-1 found: YES 1.16.2
+Configuring config.h using configuration
+Run-time dependency gio-2.0 found: YES 2.90.1
+Run-time dependency gio-unix-2.0 found: YES 2.90.1
+Run-time dependency glib-2.0 found: YES 2.90.1
+Run-time dependency gtk+-3.0 found: YES 3.24.52
+Run-time dependency gmodule-2.0 found: YES 2.90.1
+Run-time dependency gdk-pixbuf-2.0 found: YES 2.44.8
+Run-time dependency cairo found: YES 1.18.6
+Run-time dependency x11 found: YES 1.8.14
+Dependency gio-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/gdbus-codegen found: YES (/usr/bin/gdbus-codegen)
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.8
+Run-time dependency libgnomekbdui found: YES 3.28.1
+Dependency gio-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/gdbus-codegen found: YES (/usr/bin/gdbus-codegen)
+Dependency glib-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Run-time dependency gobject-introspection-1.0 found: YES 1.86.0
+Dependency gobject-introspection-1.0 for host machine found: YES 1.86.0 (cached)
+Program /usr/bin/g-ir-scanner found: YES (/usr/bin/g-ir-scanner)
+Dependency gobject-introspection-1.0 for host machine found: YES 1.86.0 (cached)
+Program /usr/bin/g-ir-compiler found: YES (/usr/bin/g-ir-compiler)
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.8
+Program vapigen found: YES (/usr/bin/vapigen)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Run-time dependency pygobject-3.0 found: YES 3.58.1
+Program python3 found: YES (/usr/bin/python3)
+Message: PyGObject overrides dirs: ['/usr/lib64/python3.15/site-packages/gi/overrides']
+Configuring applet_constants.py using configuration
+Configuring org.mate.panel.applet.MateXAppStatusAppletFactory.service using configuration
+Configuring org.x.MateXAppStatusApplet.mate-panel-applet.in using configuration
+Dependency gio-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/gdbus-codegen found: YES (/usr/bin/gdbus-codegen)
+Dependency gio-2.0 for host machine found: YES 2.90.1 (cached)
+Program /usr/bin/gdbus-codegen found: YES (/usr/bin/gdbus-codegen)
+Configuring org.x.StatusNotifierWatcher.service using configuration
+Configuring xapp-sn-watcher.desktop using configuration
+Run-time dependency dbusmenu-gtk3-0.4 found: YES 16.04.0
+Run-time dependency cairo-gobject found: YES 1.18.6
+Build targets in project: 97
+
+xapp 3.2.3
+
+  User defined options
+    auto_features : enabled
+    bindir        : /usr/bin
+    buildtype     : plain
+    datadir       : /usr/share
+    includedir    : /usr/include
+    infodir       : /usr/share/info
+    libdir        : /usr/lib64
+    libexecdir    : /usr/libexec
+    localedir     : /usr/share/locale
+    localstatedir : /var
+    mandir        : /usr/share/man
+    prefix        : /usr
+    sbindir       : /usr/bin
+    sharedstatedir: /usr/com
+    sysconfdir    : /etc
+    wrap_mode     : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.vw0A1r
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ cd xapp-3.2.3
++ export LC_ALL=en_US.UTF-8
++ LC_ALL=en_US.UTF-8
++ /usr/bin/meson compile -C build -j8 --verbose
+ninja: Entering directory `/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build'
+[1/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x. --header --output xapp-sn-watcher/sn-watcher-interface.h ../xapp-sn-watcher/sn-watcher.xml
+[2/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix net.hadess --c-namespace XApp --body --output libxapp/xapp-switcheroo-interface.c ../libxapp/net.hadess.SwitcherooControl.xml
+[3/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix net.hadess --c-namespace XApp --header --output libxapp/xapp-switcheroo-interface.h ../libxapp/net.hadess.SwitcherooControl.xml
+[4/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x. --body --output xapp-sn-watcher/sn-watcher-interface.c ../xapp-sn-watcher/sn-watcher.xml
+[5/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x.StatusIcon --c-namespace XApp --c-generate-object-manager --annotate org.x.StatusIcon org.gtk.GDBus.C.Name StatusIconInterface --body --output libxapp/xapp-statusicon-interface.c ../libxapp/org.x.StatusIcon.xml
+[6/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x.StatusIcon --c-namespace XApp --c-generate-object-manager --annotate org.x.StatusIcon org.gtk.GDBus.C.Name StatusIconInterface --header --output libxapp/xapp-statusicon-interface.h ../libxapp/org.x.StatusIcon.xml
+[7/123] /usr/bin/msgfmt -o po/af/LC_MESSAGES/xapp.mo ../po/af.po
+[8/123] /usr/bin/msgfmt -o po/am/LC_MESSAGES/xapp.mo ../po/am.po
+[9/123] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/xapp.mo ../po/ar.po
+[10/123] /usr/bin/meson --internal exe --unpickle /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/meson-private/meson_exe_glib-mkenums_c4ab3f888728b9cc17ddf07f0bb88f01c58d2fb6.dat
+[11/123] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/xapp.mo ../po/ast.po
+[12/123] /usr/bin/msgfmt -o po/az/LC_MESSAGES/xapp.mo ../po/az.po
+[13/123] /usr/bin/msgfmt -o po/be/LC_MESSAGES/xapp.mo ../po/be.po
+[14/123] /usr/bin/msgfmt -o po/ber/LC_MESSAGES/xapp.mo ../po/ber.po
+[15/123] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/xapp.mo ../po/bg.po
+[16/123] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/xapp.mo ../po/bn.po
+[17/123] /usr/bin/msgfmt -o po/br/LC_MESSAGES/xapp.mo ../po/br.po
+[18/123] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/xapp.mo ../po/ca.po
+[19/123] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/xapp.mo ../po/ca@valencia.po
+[20/123] /usr/bin/msgfmt -o po/ckb/LC_MESSAGES/xapp.mo ../po/ckb.po
+[21/123] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/xapp.mo ../po/cs.po
+[22/123] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/xapp.mo ../po/cy.po
+[23/123] /usr/bin/msgfmt -o po/da/LC_MESSAGES/xapp.mo ../po/da.po
+[24/123] /usr/bin/msgfmt -o po/de/LC_MESSAGES/xapp.mo ../po/de.po
+[25/123] /usr/bin/meson --internal exe --unpickle /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/meson-private/meson_exe_glib-mkenums_cb2f87b78a15b411f8d11c4200644291ea082b42.dat
+[26/123] /usr/bin/msgfmt -o po/el/LC_MESSAGES/xapp.mo ../po/el.po
+[27/123] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/xapp.mo ../po/en_CA.po
+[28/123] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/xapp.mo ../po/en_GB.po
+[29/123] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/xapp.mo ../po/eo.po
+[30/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x. --body --output xapp-sn-watcher/sn-item-interface.c ../xapp-sn-watcher/sn-item.xml
+[31/123] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.x. --header --output xapp-sn-watcher/sn-item-interface.h ../xapp-sn-watcher/sn-item.xml
+[32/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-switcheroo-interface.c.o -MF libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-switcheroo-interface.c.o.d -o libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-switcheroo-interface.c.o -c libxapp/xapp-switcheroo-interface.c
+[33/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-statusicon-interface.c.o -MF libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-statusicon-interface.c.o.d -o libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-statusicon-interface.c.o -c libxapp/xapp-statusicon-interface.c
+[34/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-glade-catalog.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-glade-catalog.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-glade-catalog.c.o -c ../libxapp/xapp-glade-catalog.c
+[35/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-enums.c.o -MF libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-enums.c.o.d -o libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-enums.c.o -c libxapp/xapp-enums.c
+[36/123] gcc -Ilibxapp/libxapp-gtk3-module.so.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -MD -MQ libxapp/libxapp-gtk3-module.so.p/xapp-gtk3-module.c.o -MF libxapp/libxapp-gtk3-module.so.p/xapp-gtk3-module.c.o.d -o libxapp/libxapp-gtk3-module.so.p/xapp-gtk3-module.c.o -c ../libxapp/xapp-gtk3-module.c
+[37/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-dark-mode-manager.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-dark-mode-manager.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-dark-mode-manager.c.o -c ../libxapp/xapp-dark-mode-manager.c
+../libxapp/xapp-dark-mode-manager.c:61:1: warning: ‘color_scheme_name’ defined but not used [-Wunused-function]
+   61 | color_scheme_name (ColorScheme scheme)
+      | ^~~~~~~~~~~~~~~~~
+[38/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-gpu-offload-helper.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-gpu-offload-helper.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-gpu-offload-helper.c.o -c ../libxapp/xapp-gpu-offload-helper.c
+[39/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-favorites.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-favorites.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-favorites.c.o -c ../libxapp/xapp-favorites.c
+../libxapp/xapp-favorites.c: In function ‘populate_action_list’:
+../libxapp/xapp-favorites.c:1335:10: warning: variable ‘i’ set but not used [-Wunused-but-set-variable=]
+ 1335 |     gint i;
+      |          ^
+[40/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-gtk-window.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-gtk-window.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-gtk-window.c.o -c ../libxapp/xapp-gtk-window.c
+[41/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-button.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-button.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-button.c.o -c ../libxapp/xapp-icon-chooser-button.c
+[42/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-monitor-blanker.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-monitor-blanker.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-monitor-blanker.c.o -c ../libxapp/xapp-monitor-blanker.c
+[43/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-preferences-window.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-preferences-window.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-preferences-window.c.o -c ../libxapp/xapp-preferences-window.c
+[44/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-stack-sidebar.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-stack-sidebar.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-stack-sidebar.c.o -c ../libxapp/xapp-stack-sidebar.c
+[45/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-status-icon-monitor.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-status-icon-monitor.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-status-icon-monitor.c.o -c ../libxapp/xapp-status-icon-monitor.c
+[46/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-dialog.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-dialog.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-dialog.c.o -c ../libxapp/xapp-icon-chooser-dialog.c
+[47/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-status-icon.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-status-icon.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-status-icon.c.o -c ../libxapp/xapp-status-icon.c
+../libxapp/xapp-status-icon.c:179:1: warning: ‘direction_to_str’ defined but not used [-Wunused-function]
+  179 | direction_to_str (XAppScrollDirection direction)
+      | ^~~~~~~~~~~~~~~~
+../libxapp/xapp-status-icon.c:163:1: warning: ‘state_to_str’ defined but not used [-Wunused-function]
+  163 | state_to_str (XAppStatusIconState state)
+      | ^~~~~~~~~~~~
+../libxapp/xapp-status-icon.c:147:1: warning: ‘button_to_str’ defined but not used [-Wunused-function]
+  147 | button_to_str (guint button)
+      | ^~~~~~~~~~~~~
+../libxapp/xapp-status-icon.c:130:1: warning: ‘panel_position_to_str’ defined but not used [-Wunused-function]
+  130 | panel_position_to_str (GtkPositionType type)
+      | ^~~~~~~~~~~~~~~~~~~~~
+[48/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-util.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-util.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-util.c.o -c ../libxapp/xapp-util.c
+[49/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-style-manager.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-style-manager.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-style-manager.c.o -c ../libxapp/xapp-style-manager.c
+[50/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-debug.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-debug.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-debug.c.o -c ../libxapp/xapp-debug.c
+[51/123] gcc -Ixapp-sn-watcher/xapp-sn-watcher.p -Ixapp-sn-watcher -I../xapp-sn-watcher -I. -I.. -Ilibxapp -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -I/usr/include/libdbusmenu-gtk3-0.4 -I/usr/include/libdbusmenu-glib-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -pthread -MD -MQ xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-watcher-interface.c.o -MF xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-watcher-interface.c.o.d -o xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-watcher-interface.c.o -c xapp-sn-watcher/sn-watcher-interface.c
+[52/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-visibility-group.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-visibility-group.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-visibility-group.c.o -c ../libxapp/xapp-visibility-group.c
+[53/123] /usr/bin/msgfmt -o po/es/LC_MESSAGES/xapp.mo ../po/es.po
+[54/123] /usr/bin/msgfmt -o po/et/LC_MESSAGES/xapp.mo ../po/et.po
+[55/123] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/xapp.mo ../po/eu.po
+[56/123] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/xapp.mo ../po/fa.po
+[57/123] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/xapp.mo ../po/fi.po
+[58/123] /usr/bin/msgfmt -o po/fil/LC_MESSAGES/xapp.mo ../po/fil.po
+[59/123] gcc -Ixapp-sn-watcher/xapp-sn-watcher.p -Ixapp-sn-watcher -I../xapp-sn-watcher -I. -I.. -Ilibxapp -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -I/usr/include/libdbusmenu-gtk3-0.4 -I/usr/include/libdbusmenu-glib-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -pthread -MD -MQ xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-item-interface.c.o -MF xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-item-interface.c.o.d -o xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-item-interface.c.o -c xapp-sn-watcher/sn-item-interface.c
+[60/123] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/xapp.mo ../po/fr.po
+[61/123] /usr/bin/msgfmt -o po/fr_CA/LC_MESSAGES/xapp.mo ../po/fr_CA.po
+[62/123] /usr/bin/msgfmt -o po/he/LC_MESSAGES/xapp.mo ../po/he.po
+[63/123] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/xapp.mo ../po/hi.po
+[64/123] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/xapp.mo ../po/hr.po
+[65/123] /usr/bin/msgfmt -o po/ia/LC_MESSAGES/xapp.mo ../po/ia.po
+[66/123] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/xapp.mo ../po/hu.po
+[67/123] /usr/bin/msgfmt -o po/id/LC_MESSAGES/xapp.mo ../po/id.po
+[68/123] /usr/bin/msgfmt -o po/ie/LC_MESSAGES/xapp.mo ../po/ie.po
+[69/123] /usr/bin/msgfmt -o po/is/LC_MESSAGES/xapp.mo ../po/is.po
+[70/123] /usr/bin/msgfmt -o po/it/LC_MESSAGES/xapp.mo ../po/it.po
+[71/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/xapp-kbd-layout-controller.c.o -MF libxapp/libxapp.so.3.2.3.p/xapp-kbd-layout-controller.c.o.d -o libxapp/libxapp.so.3.2.3.p/xapp-kbd-layout-controller.c.o -c ../libxapp/xapp-kbd-layout-controller.c
+[72/123] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/xapp.mo ../po/ja.po
+[73/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-enumerator.c.o -MF libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-enumerator.c.o.d -o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-enumerator.c.o -c ../libxapp/favorite-vfs-file-enumerator.c
+[74/123] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/xapp.mo ../po/ka.po
+[75/123] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/xapp.mo ../po/kk.po
+[76/123] /usr/bin/msgfmt -o po/kab/LC_MESSAGES/xapp.mo ../po/kab.po
+[77/123] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/xapp.mo ../po/ko.po
+[78/123] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/xapp.mo ../po/ku.po
+[79/123] /usr/bin/msgfmt -o po/la/LC_MESSAGES/xapp.mo ../po/la.po
+[80/123] /usr/bin/msgfmt -o po/lo/LC_MESSAGES/xapp.mo ../po/lo.po
+[81/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/favorite-vfs-file.c.o -MF libxapp/libxapp.so.3.2.3.p/favorite-vfs-file.c.o.d -o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file.c.o -c ../libxapp/favorite-vfs-file.c
+[82/123] gcc -Ilibxapp/libxapp.so.3.2.3.p -Ilibxapp -I../libxapp -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -fPIC -pthread -Wno-declaration-after-statement '-DG_LOG_DOMAIN="XApp"' -MD -MQ libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-monitor.c.o -MF libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-monitor.c.o.d -o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-monitor.c.o -c ../libxapp/favorite-vfs-file-monitor.c
+[83/123] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/xapp.mo ../po/lt.po
+[84/123] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/xapp.mo ../po/lv.po
+[85/123] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/xapp.mo ../po/mai.po
+[86/123] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/xapp.mo ../po/mk.po
+[87/123] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/xapp.mo ../po/ms.po
+[88/123] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/xapp.mo ../po/nl.po
+[89/123] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/xapp.mo ../po/nn.po
+[90/123] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/xapp.mo ../po/nb.po
+[91/123] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/xapp.mo ../po/oc.po
+[92/123] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/xapp.mo ../po/pl.po
+[93/123] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/xapp.mo ../po/pt.po
+[94/123] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/xapp.mo ../po/pt_BR.po
+[95/123] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/xapp.mo ../po/sk.po
+[96/123] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/xapp.mo ../po/ro.po
+[97/123] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/xapp.mo ../po/ru.po
+[98/123] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/xapp.mo ../po/sl.po
+[99/123] /usr/bin/msgfmt -o po/sn/LC_MESSAGES/xapp.mo ../po/sn.po
+[100/123] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/xapp.mo ../po/sq.po
+[101/123] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/xapp.mo ../po/sr.po
+[102/123] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/xapp.mo ../po/sr@latin.po
+[103/123] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/xapp.mo ../po/sv.po
+[104/123] /usr/bin/msgfmt -o po/te/LC_MESSAGES/xapp.mo ../po/te.po
+[105/123] /usr/bin/msgfmt -o po/th/LC_MESSAGES/xapp.mo ../po/th.po
+[106/123] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/xapp.mo ../po/tr.po
+[107/123] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/xapp.mo ../po/uk.po
+[108/123] /usr/bin/msgfmt -o po/uz/LC_MESSAGES/xapp.mo ../po/uz.po
+[109/123] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/xapp.mo ../po/zh_TW.po
+[110/123] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/xapp.mo ../po/vi.po
+[111/123] /usr/bin/msgfmt -o po/zgh/LC_MESSAGES/xapp.mo ../po/zgh.po
+[112/123] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/xapp.mo ../po/zh_CN.po
+[113/123] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/xapp.mo ../po/zh_HK.po
+[114/123] /usr/bin/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt status-applets/mate/org.x.MateXAppStatusApplet.mate-panel-applet.in status-applets/mate/org.x.MateXAppStatusApplet.mate-panel-applet desktop /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/po
+[115/123] gcc -Ixapp-sn-watcher/xapp-sn-watcher.p -Ixapp-sn-watcher -I../xapp-sn-watcher -I. -I.. -Ilibxapp -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -I/usr/include/libdbusmenu-gtk3-0.4 -I/usr/include/libdbusmenu-glib-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -pthread -MD -MQ xapp-sn-watcher/xapp-sn-watcher.p/xapp-sn-watcher.c.o -MF xapp-sn-watcher/xapp-sn-watcher.p/xapp-sn-watcher.c.o.d -o xapp-sn-watcher/xapp-sn-watcher.p/xapp-sn-watcher.c.o -c ../xapp-sn-watcher/xapp-sn-watcher.c
+[116/123] gcc -Ixapp-sn-watcher/xapp-sn-watcher.p -Ixapp-sn-watcher -I../xapp-sn-watcher -I. -I.. -Ilibxapp -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -I/usr/include/libdbusmenu-gtk3-0.4 -I/usr/include/libdbusmenu-glib-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wunused -Wimplicit-function-declaration -Wno-deprecated-declarations -Wno-deprecated -Wno-declaration-after-statement -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -pthread -MD -MQ xapp-sn-watcher/xapp-sn-watcher.p/sn-item.c.o -MF xapp-sn-watcher/xapp-sn-watcher.p/sn-item.c.o.d -o xapp-sn-watcher/xapp-sn-watcher.p/sn-item.c.o -c ../xapp-sn-watcher/sn-item.c
+[117/123] gcc  -o libxapp/libxapp.so.3.2.3 libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-switcheroo-interface.c.o libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-statusicon-interface.c.o libxapp/libxapp.so.3.2.3.p/meson-generated_.._xapp-enums.c.o libxapp/libxapp.so.3.2.3.p/xapp-dark-mode-manager.c.o libxapp/libxapp.so.3.2.3.p/xapp-favorites.c.o libxapp/libxapp.so.3.2.3.p/xapp-glade-catalog.c.o libxapp/libxapp.so.3.2.3.p/xapp-gtk-window.c.o libxapp/libxapp.so.3.2.3.p/xapp-gpu-offload-helper.c.o libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-button.c.o libxapp/libxapp.so.3.2.3.p/xapp-icon-chooser-dialog.c.o libxapp/libxapp.so.3.2.3.p/xapp-monitor-blanker.c.o libxapp/libxapp.so.3.2.3.p/xapp-preferences-window.c.o libxapp/libxapp.so.3.2.3.p/xapp-stack-sidebar.c.o libxapp/libxapp.so.3.2.3.p/xapp-status-icon.c.o libxapp/libxapp.so.3.2.3.p/xapp-status-icon-monitor.c.o libxapp/libxapp.so.3.2.3.p/xapp-style-manager.c.o libxapp/libxapp.so.3.2.3.p/xapp-util.c.o libxapp/libxapp.so.3.2.3.p/xapp-visibility-group.c.o libxapp/libxapp.so.3.2.3.p/xapp-kbd-layout-controller.c.o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file.c.o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-enumerator.c.o libxapp/libxapp.so.3.2.3.p/favorite-vfs-file-monitor.c.o libxapp/libxapp.so.3.2.3.p/xapp-debug.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libxapp.so.1 -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2 -Wl,--no-undefined -flto -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-Bsymbolic -Wl,-z,relro -Wl,-z,now -Wl,--start-group -lm -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lglib-2.0 /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libatk-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libcairo.so /usr/lib64/libharfbuzz.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libz.so -Wl,--export-dynamic -pthread -lgmodule-2.0 -lglib-2.0 /usr/lib64/libX11.so /usr/lib64/libgnomekbdui.so -Wl,--end-group
+lto-wrapper: warning: using serial compilation of 2 LTRANS jobs
+lto-wrapper: note: see the ‘-flto’ option documentation for more information
+[118/123] /usr/bin/meson --internal symbolextractor /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build libxapp/libxapp.so.3.2.3 libxapp/libxapp.so.3.2.3 libxapp/libxapp.so.3.2.3.p/libxapp.so.3.2.3.symbols 
+[119/123] gcc  -o libxapp/libxapp-gtk3-module.so libxapp/libxapp-gtk3-module.so.p/xapp-gtk3-module.c.o -Wl,--as-needed -Wl,--allow-shlib-undefined -shared -fPIC -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2 -Wl,--no-undefined -flto -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold '-Wl,-rpath,$ORIGIN/' -Wl,--start-group libxapp/libxapp.so.3.2.3 /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libatk-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libcairo.so /usr/lib64/libharfbuzz.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libz.so -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lglib-2.0 -Wl,--export-dynamic -pthread -lgmodule-2.0 -lglib-2.0 /usr/lib64/libX11.so /usr/lib64/libgnomekbdui.so -Wl,--end-group
+[120/123] gcc  -o xapp-sn-watcher/xapp-sn-watcher xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-watcher-interface.c.o xapp-sn-watcher/xapp-sn-watcher.p/meson-generated_.._sn-item-interface.c.o xapp-sn-watcher/xapp-sn-watcher.p/xapp-sn-watcher.c.o xapp-sn-watcher/xapp-sn-watcher.p/sn-item.c.o -Wl,--as-needed -Wl,--no-undefined -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2 -Wl,--no-undefined -flto -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold '-Wl,-rpath,$ORIGIN/../libxapp' -Wl,--start-group libxapp/libxapp.so.3.2.3 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lglib-2.0 /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libatk-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libcairo.so /usr/lib64/libharfbuzz.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libz.so -Wl,--export-dynamic -pthread -lgmodule-2.0 -lglib-2.0 /usr/lib64/libX11.so /usr/lib64/libgnomekbdui.so /usr/lib64/libdbusmenu-gtk3.so /usr/lib64/libdbusmenu-glib.so -Wl,--end-group
+[121/123] env PKG_CONFIG_PATH=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/meson-uninstalled:/usr/lib64/pkgconfig:/usr/share/pkgconfig PKG_CONFIG=/usr/bin/pkg-config CC=gcc 'CFLAGS=-Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold -Wl,-O2 -Wl,--no-undefined -flto -Os -fomit-frame-pointer -g3 -gdwarf-4 -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fstack-protector-all --param=ssp-buffer-size=4 -m64 -mtune=generic -flto -fuse-ld=mold' /usr/bin/g-ir-scanner --quiet --no-libtool --namespace=XApp --nsversion=1.0 --warn-all --output libxapp/XApp-1.0.gir -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/libxapp -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/. -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/. --filelist=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/libxapp/libxapp.so.3.2.3.p/XApp_1.0_gir_filelist --include=GObject-2.0 --include=Gtk-3.0 --symbol-prefix=xapp_ --identifier-prefix=XApp --pkg-export=xapp --cflags-begin -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/. -I/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/pixman-1 -I/usr/include/libxml2 -I/usr/include/gobject-introspection-1.0 --cflags-end --add-include-path=/usr/share/gir-1.0 -L/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/libxapp --library xapp --extra-library=gio-2.0 --extra-library=gobject-2.0 --extra-library=glib-2.0 --extra-library=gtk-3 --extra-library=gdk-3 --extra-library=pangocairo-1.0 --extra-library=cairo-gobject --extra-library=gdk_pixbuf-2.0 --extra-library=atk-1.0 --extra-library=pango-1.0 --extra-library=cairo --extra-library=harfbuzz --extra-library=z --extra-library=gmodule-2.0 --extra-library=X11 --extra-library=gnomekbdui --extra-library=girepository-1.0 --sources-top-dirs /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/ --sources-top-dirs /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/
+/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/tmp-introspectapmc2lid/XApp-1.0.c: In function ‘invoke_get_type’:
+/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/tmp-introspectapmc2lid/XApp-1.0.c:152:47: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+  152 |   if (!g_module_symbol (self, symbol, (void**)&sym))
+      |                                               ^~~~
+/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/tmp-introspectapmc2lid/XApp-1.0.c: In function ‘invoke_error_quark’:
+/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/tmp-introspectapmc2lid/XApp-1.0.c:177:47: warning: dereferencing type-punned pointer might break strict-aliasing rules [-Wstrict-aliasing]
+  177 |   if (!g_module_symbol (self, symbol, (void**)&sym))
+      |                                               ^~~~
+[122/123] /usr/bin/vapigen --quiet --library=xapp --directory=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/libxapp --metadatadir=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp --pkg=glib-2.0 --pkg=gio-unix-2.0 --pkg=gtk+-3.0 --metadatadir=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/libxapp/XApp-1.0.gir
+[123/123] /usr/bin/g-ir-compiler libxapp/XApp-1.0.gir --output libxapp/XApp-1.0.typelib --includedir=/usr/share/gir-1.0
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build -j 8 -v
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.2WuFfr
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ /usr/bin/rm -rf /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT
++ /usr/bin/mkdir -p /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ /usr/bin/mkdir /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT
++ cd xapp-3.2.3
++ export LC_ALL=en_US.UTF-8
++ LC_ALL=en_US.UTF-8
++ DESTDIR=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT
++ /usr/bin/meson install -C build --no-rebuild
+Installing subdir /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/emblems/emblem-xapp-favorite.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/emblems
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/apps/xapp-favorites-app-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/apps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/apps/xapp-mate-status-applet.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/apps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/apps/xapp-favorites-app.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/apps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-use-regex-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-top-pane-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-edit-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-go-history-previous-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-view-fit-width-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-diaporama-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/extract-archive-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/media-mount-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-text-case-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-go-history-next-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-go-history-previous-symbolic-rtl.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-annotations-squiggly-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/category-search-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-search-wrap-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-go-history-next-symbolic-rtl.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-right-pane-symbolic-rtl.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-left-pane-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-view-fit-height-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-favorite-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-unfavorite-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-bottom-pane-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-search-entire-word-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-annotations-text-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/add-files-to-archive-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-pin-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-right-pane-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-format-text-highlight-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/xapp-unpin-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/actions/view-left-pane-symbolic-rtl.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/actions
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/categories/xapp-prefs-plugins-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/categories
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/categories/xapp-prefs-toolbar-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/categories
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/categories/xapp-prefs-behavior-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/categories
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/categories/xapp-prefs-preview-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/categories
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/categories/xapp-prefs-display-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/categories
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/places/xapp-user-favorites.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/places
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/icons/hicolor/scalable/places/xapp-user-favorites-symbolic.svg to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/icons/hicolor/scalable/places
+Installing libxapp/xapp-statusicon-interface.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing libxapp/libxapp.so.3.2.3 to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64
+Installing libxapp/XApp-1.0.gir to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/gir-1.0
+Installing libxapp/XApp-1.0.typelib to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/girepository-1.0
+Installing libxapp/xapp.vapi to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/vala/vapi
+Installing libxapp/libxapp-gtk3-module.so to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/gtk-3.0/modules
+Installing po/af/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/am/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ar/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/be/LC_MESSAGES
+Installing po/ber/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ber/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/bn/LC_MESSAGES
+Installing po/br/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/br/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/ckb/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ckb/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/de/LC_MESSAGES
+Installing po/el/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/fi/LC_MESSAGES
+Installing po/fil/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/fil/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/fr/LC_MESSAGES
+Installing po/fr_CA/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/fr_CA/LC_MESSAGES
+Installing po/he/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/hu/LC_MESSAGES
+Installing po/ia/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ia/LC_MESSAGES
+Installing po/id/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/id/LC_MESSAGES
+Installing po/ie/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ie/LC_MESSAGES
+Installing po/is/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ka/LC_MESSAGES
+Installing po/kab/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/kab/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/kk/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ku/LC_MESSAGES
+Installing po/la/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/la/LC_MESSAGES
+Installing po/lo/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/lo/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/mai/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/mk/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/nb/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/nn/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/oc/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/ru/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sl/LC_MESSAGES
+Installing po/sn/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sn/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/sv/LC_MESSAGES
+Installing po/te/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/te/LC_MESSAGES
+Installing po/th/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/tr/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/uk/LC_MESSAGES
+Installing po/uz/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/uz/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/vi/LC_MESSAGES
+Installing po/zgh/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/zgh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/xapp.mo to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/locale/zh_TW/LC_MESSAGES
+Installing status-applets/mate/org.x.MateXAppStatusApplet.mate-panel-applet to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/mate-panel/applets
+Installing xapp-sn-watcher/xapp-sn-watcher to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/xapps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-dark-mode-manager.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-favorites.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-gtk-window.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-gpu-offload-helper.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-icon-chooser-button.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-icon-chooser-dialog.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-monitor-blanker.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-preferences-window.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-stack-sidebar.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-status-icon.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-status-icon-monitor.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-style-manager.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-util.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-visibility-group.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-kbd-layout-controller.h to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/include/xapp/libxapp
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/meson-private/xapp.pc to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/pkgconfig
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/libxapp/xapp-glade-catalog.xml to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/glade/catalogs
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/meson-private/xapp.deps to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/vala/vapi
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/schemas/org.x.apps.gschema.xml to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/glib-2.0/schemas
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/pygobject/XApp.py to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/python3.15/site-packages/gi/overrides
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/status-applets/mate/applet_constants.py to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/libexec/xapps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/status-applets/mate/mate-xapp-status-applet.py to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/libexec/xapps
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/status-applets/mate/org.mate.panel.applet.MateXAppStatusAppletFactory.service to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/dbus-1/services
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/scripts/pastebin to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/bin
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/scripts/upload-system-info to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/bin
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/scripts/xapp-gpu-offload to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/bin
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/scripts/xfce4-set-wallpaper to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/bin
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/data/80xapp-gtk3-module.sh to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/etc/X11/xinit/xinitrc.d
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/xapp-sn-watcher/org.x.StatusNotifierWatcher.service to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/dbus-1/services
+Installing /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/build/xapp-sn-watcher/xapp-sn-watcher.desktop to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/etc/xdg/autostart
+Installing symlink pointing to libxapp.so.3.2.3 to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/libxapp.so.1
+Installing symlink pointing to libxapp.so.1 to /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/lib64/libxapp.so
+Running custom install script '/usr/bin/python /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/schemas/meson_install_schemas.py'
++ /usr/lib/rpm/find-lang.sh /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT xapp --all-name --with-qt --with-html --with-man
++ find /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT -name '*.la' -delete
++ /usr/lib/rpm/find-lang.sh /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT xapp
++ /usr/bin/find-debuginfo -j8 -m -i --build-id-seed 3.2.3-1 --unique-debug-suffix -3.2.3-1.x86_64 --unique-debug-src-base xapp-3.2.3-1.x86_64 --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 -S debugsourcefiles.list /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3
+find-debuginfo: starting
+
+Extracting debug info from 3 files
+DWARF-compressing 3 files
+sepdebugcrcfix: Updated 3 CRC32s, 0 CRC32s did match.
+Creating .debug symlinks for symlinks to ELF files
+Copying sources found by 'debugedit -l' to /usr/src/debug/xapp-3.2.3-1.x86_64
+find-debuginfo: done
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_files
++ '[' -n '' ']'
++ COMPRESS='zstd -f --rm -19 -T0'
++ COMPRESS_EXT=.zst
++ /usr/lib/rpm/brp-compress
++ '[' -n '' ']'
++ /usr/share/spec-helper/relink_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_perl
++ '[' -n '' ']'
++ /usr/share/spec-helper/lib_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_xdg
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_file_permissions
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_pamd
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_pkgconfig
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_info_dir
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_libtool_files
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_eol
++ '[' -n '' ']'
++ /usr/share/spec-helper/check_elf_files
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_rpath
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_lto_intermediates_in_static_libraries
++ '[' 1 -eq 1 ']'
++ /usr/lib/rpm/brp-python-bytecompile '' 0 ''
++ /usr/lib/rpm/brp-python-hardlink
+Reading /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/SPECPARTS/rpm-debuginfo.specpart
+Processing files: xapp-3.2.3-1.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.tKlBa2
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ cd xapp-3.2.3
++ DOCDIR=/home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/doc/xapp
++ export LC_ALL=C.UTF-8
++ LC_ALL=C.UTF-8
++ export DOCDIR
++ /usr/bin/mkdir -p /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/doc/xapp
++ cp -pr /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/README.md /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/doc/xapp
++ cp -pr /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/xapp-3.2.3/COPYING /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT/usr/share/doc/xapp
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Provides: xapp = 3.2.3-1 xapp(x86-64) = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Requires: /bin/bash /usr/bin/python3 python(abi) = 3.15 typelib(GLib) typelib(GObject) typelib(Gdk) typelib(GdkPixbuf) typelib(Gio) typelib(Gtk) = 3.0 typelib(XApp) = 1.0
+Obsoletes: xapps < 3.2.3-1
+Processing files: lib64xapp-3.2.3-1.x86_64
+Provides: lib64xapp = 3.2.3-1 lib64xapp(x86-64) = 3.2.3-1 lib64xapp1 = 3.2.3-1 libxapp.so.1()(64bit)
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Requires: libX11.so.6()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.34)(64bit) libc.so.6(GLIBC_2.4)(64bit) libcairo-gobject.so.2()(64bit) libcairo.so.2()(64bit) libdbusmenu-gtk3.so.4()(64bit) libgdk-3.so.0()(64bit) libgdk_pixbuf-2.0.so.0()(64bit) libgio-2.0.so.0()(64bit) libglib-2.0.so.0()(64bit) libgnomekbdui.so.8()(64bit) libgobject-2.0.so.0()(64bit) libgtk-3.so.0()(64bit) libpango-1.0.so.0()(64bit) libxapp.so.1()(64bit) rtld(GNU_HASH)
+Obsoletes: lib64xapp1 < 3.2.3-1 lib64xapps0 < 3.2.3-1
+Processing files: lib64xapp-devel-3.2.3-1.x86_64
+Provides: devel(libxapp(64bit)) lib64xapp-devel = 3.2.3-1 lib64xapp-devel(x86-64) = 3.2.3-1 libxapp-devel = 3.2.3-1 libxapp-gtk3-module.so()(64bit) pkgconfig(xapp) = 3.2.3 xapp-devel = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Requires: /usr/bin/pkg-config libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.4)(64bit) libgio-2.0.so.0()(64bit) libglib-2.0.so.0()(64bit) libgmodule-2.0.so.0()(64bit) libgobject-2.0.so.0()(64bit) libgtk-3.so.0()(64bit) libxapp.so.1()(64bit) pkgconfig(cairo) pkgconfig(gdk-pixbuf-2.0) >= 2.22.0 pkgconfig(gio-2.0) >= 2.44.0 pkgconfig(gio-unix-2.0) >= 2.44.0 pkgconfig(glib-2.0) >= 2.44.0 pkgconfig(gmodule-2.0) >= 2.44.0 pkgconfig(gobject-2.0) pkgconfig(gtk+-3.0) >= 3.22 pkgconfig(libgnomekbdui) pkgconfig(x11) pkgconfig(xkbfile) rtld(GNU_HASH)
+Obsoletes: lib64xapps-devel < 3.2.3-1
+Processing files: lib64xapp-gir3.2-3.2.3-1.x86_64
+Provides: lib64xapp-gir3.2 = 3.2.3-1 lib64xapp-gir3.2(x86-64) = 3.2.3-1 typelib(XApp) = 1.0
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Requires: libxapp.so.1()(64bit) typelib(Atk) = 1.0 typelib(GLib) = 2.0 typelib(GModule) = 2.0 typelib(GObject) = 2.0 typelib(Gdk) = 3.0 typelib(GdkPixbuf) = 2.0 typelib(Gio) = 2.0 typelib(Gtk) = 3.0 typelib(HarfBuzz) = 0.0 typelib(Pango) = 1.0 typelib(cairo) = 1.0 typelib(freetype2) = 2.0 typelib(xlib) = 2.0
+Obsoletes: lib64xapp-gir2.6 < 3.2.3-1 lib64xapp-gir2.8 < 3.2.3-1 lib64xapps-gir1.0 < 3.2.3-1
+Processing files: xapp-debugsource-3.2.3-1.x86_64
+Provides: xapp-debugsource = 3.2.3-1 xapp-debugsource(x86-64) = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Processing files: xapp-debuginfo-3.2.3-1.x86_64
+Provides: xapp-debuginfo = 3.2.3-1 xapp-debuginfo(x86-64) = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Recommends: xapp-debugsource(x86-64) = 3.2.3-1
+Processing files: lib64xapp-debuginfo-3.2.3-1.x86_64
+Provides: debuginfo(build-id) = 11d8768731450c1ab3bef0e1f3da2ecb1aa90dd8 debuginfo(build-id) = d001ed92a04b93480c255b86169e5dd93f48c5e9 lib64xapp-debuginfo = 3.2.3-1 lib64xapp-debuginfo(x86-64) = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Recommends: xapp-debugsource(x86-64) = 3.2.3-1
+Processing files: lib64xapp-devel-debuginfo-3.2.3-1.x86_64
+Provides: debuginfo(build-id) = 5d37852f8c52499ca7c5ab3905e421c791ffc2c1 lib64xapp-devel-debuginfo = 3.2.3-1 lib64xapp-devel-debuginfo(x86-64) = 3.2.3-1
+Requires(rpmlib): rpmlib(LargeFiles) <= 4.12.0-1
+Recommends: xapp-debugsource(x86-64) = 3.2.3-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build/BUILDROOT
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-gir3.2-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-devel-debuginfo-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/xapp-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-devel-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/xapp-debugsource-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/xapp-debuginfo-3.2.3-1-omv2690.x86_64.rpm
+Wrote: /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-debuginfo-3.2.3-1-omv2690.x86_64.rpm
+Executing "/usr/bin/rpmlint  /home/c137/workspace1/xapps/RPMS/x86_64/xapp-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-devel-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-gir3.2-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/xapp-debugsource-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/xapp-debuginfo-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-debuginfo-3.2.3-1-omv2690.x86_64.rpm /home/c137/workspace1/xapps/RPMS/x86_64/lib64xapp-devel-debuginfo-3.2.3-1-omv2690.x86_64.rpm ":
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+(none): W: unable to init enchant, spellchecking disabled.
+============================ rpmlint session starts ============================
+rpmlint: 2.10.0
+configuration:
+    /usr/lib/python3.15/site-packages/rpmlint/configdefaults.toml
+    /etc/xdg/rpmlint/licenses.toml
+    /etc/xdg/rpmlint/openmandriva.toml
+checks: 31, packages: 8
+
+lib64xapp.x86_64: W: position-independent-executable-suggested /usr/lib64/xapps/xapp-sn-watcher
+lib64xapp.x86_64: W: obsolete-not-provided lib64xapps0
+lib64xapp-devel.x86_64: W: obsolete-not-provided lib64xapps-devel
+lib64xapp-gir3.2.x86_64: W: obsolete-not-provided lib64xapp-gir2.6
+lib64xapp-gir3.2.x86_64: W: obsolete-not-provided lib64xapp-gir2.8
+lib64xapp-gir3.2.x86_64: W: obsolete-not-provided lib64xapps-gir1.0
+xapp.x86_64: W: obsolete-not-provided xapps
+xapp.x86_64: W: non-conffile-in-etc /etc/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh
+xapp.x86_64: W: non-conffile-in-etc /etc/xdg/autostart/xapp-sn-watcher.desktop
+xapp.x86_64: W: no-manual-page-for-binary pastebin
+xapp.x86_64: W: no-manual-page-for-binary upload-system-info
+xapp.x86_64: W: no-manual-page-for-binary xapp-gpu-offload
+xapp.x86_64: W: no-manual-page-for-binary xfce4-set-wallpaper
+xapp.x86_64: W: name-repeated-in-summary XApp
+lib64xapp.x86_64: W: invalid-license LGPLv2+
+lib64xapp-debuginfo.x86_64: W: invalid-license LGPLv2+
+lib64xapp-devel.x86_64: W: invalid-license LGPLv2+
+lib64xapp-devel-debuginfo.x86_64: W: invalid-license LGPLv2+
+lib64xapp-gir3.2.x86_64: W: invalid-license LGPLv2+
+xapp.x86_64: W: invalid-license LGPLv2+
+xapp-debuginfo.x86_64: W: invalid-license LGPLv2+
+xapp-debugsource.x86_64: W: invalid-license LGPLv2+
+xapp.x86_64: W: files-duplicate /usr/share/icons/hicolor/scalable/actions/view-right-pane-symbolic-rtl.svg /usr/share/icons/hicolor/scalable/actions/view-left-pane-symbolic.svg
+xapp.x86_64: W: files-duplicate /usr/share/icons/hicolor/scalable/actions/xapp-go-history-previous-symbolic.svg /usr/share/icons/hicolor/scalable/actions/xapp-go-history-next-symbolic-rtl.svg
+xapp.x86_64: W: files-duplicate /usr/share/icons/hicolor/scalable/actions/xapp-go-history-previous-symbolic-rtl.svg /usr/share/icons/hicolor/scalable/actions/xapp-go-history-next-symbolic.svg
+xapp.x86_64: W: files-duplicate /usr/share/icons/hicolor/scalable/places/xapp-user-favorites.svg /usr/share/icons/hicolor/scalable/apps/xapp-favorites-app.svg
+ 8 packages and 0 specfiles checked; 0 errors, 26 warnings, 53 filtered, 0 badness; has taken 0.5 s 
+Executing(rmbuild): /bin/sh -e /var/tmp/rpm-tmp.2xWlrz
++ umask 022
++ cd /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ test -d /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ rm -rf /home/c137/workspace1/xapps/BUILD/xapp-3.2.3-build
++ RPM_EC=0
+++ jobs -p
++ exit 0
