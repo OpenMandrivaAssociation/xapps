@@ -12,7 +12,7 @@
 
 Name:           %{oname}
 Version:        3.2.3
-Release:        2
+Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
