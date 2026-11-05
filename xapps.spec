@@ -1,6 +1,6 @@
 %define oname           xapp
 %define major           1
-%define girmajor        3.2
+%define girmajor        3.4
 %define libname         %mklibname xapp
 %define oldlibname      %mklibname xapp 1
 %define develname       %mklibname xapp -d
@@ -11,7 +11,7 @@
 %global __requires_exclude ^typelib\\(MatePanelApplet\\).*
 
 Name:           %{oname}
-Version:        3.2.3
+Version:        3.4.0
 Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
@@ -36,6 +36,8 @@ BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	vala-devel
 BuildRequires:	mold
 BuildRequires:	python%{pyver}dist(pygobject)
+BuildRequires:  pkgconfig(gtk-layer-shell-0) >= 0.8
+
 Requires:	python%{pyver}dist(pygobject)
 Requires:	python-gobject3
 Requires:	inxi
@@ -67,6 +69,7 @@ Summary:        Development files for %{name}
 Group:          Development/C
 Requires:       %{libname} = %{version}-%{release}
 Requires:       %{girname} = %{version}-%{release}
+Requires:	pkgconfig(gtk-layer-shell-0) >= 0.8
 Provides:       %{name}-devel = %{version}-%{release}
 Provides:       lib%{name}-devel = %{version}-%{release}
 Obsoletes:      %{_lib}xapps-devel < %{EVRD}
