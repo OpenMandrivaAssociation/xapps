@@ -12,7 +12,7 @@
 
 Name:           %{oname}
 Version:        3.4.0
-Release:        2
+Release:        3
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
@@ -47,6 +47,7 @@ Requires:	%{libname} = %{version}-%{release}
 Requires:	%{girname} = %{version}-%{release}
 
 Obsoletes:      xapps < %{EVRD}
+Obsoletes:      xapp < %{EVRD}
 
 %description
 This package includes files that are shared between several XApp
@@ -57,8 +58,8 @@ Group:          System/Libraries
 Summary:        JavaScript bindings based on %{name}
 Requires:       %{name} = %{version}-%{release}
 Obsoletes:      %{_lib}xapps0 < %{EVRD}
-Obsoletes:      %{_lib}xapps0 < %{EVRD}
 Obsoletes:      %{_lib}xapp1 < %{EVRD}
+Obsoletes:      %{_lib}xapp < %{EVRD}
 %rename %{oldlibname}
 
 %description -n %{libname}
@@ -73,6 +74,7 @@ Requires:	pkgconfig(gtk-layer-shell-0) >= 0.8
 Provides:       %{name}-devel = %{version}-%{release}
 Provides:       lib%{name}-devel = %{version}-%{release}
 Obsoletes:      %{_lib}xapps-devel < %{EVRD}
+Obsoletes:      %{_lib}xapp-devel < %{EVRD}
 
 %description -n %{develname}
 Files for development with %{name}.
@@ -122,6 +124,7 @@ find %{buildroot} -name '*.la' -delete
 %files -n %{libname}
 %{_libdir}/libxapp.so.%{major}
 %{_libdir}/libxapp.so.%{girmajor}*
+%{_libdir}/gtk-3.0/modules/libxapp-gtk3-module.so
 %{_libdir}/xapps/xapp-sn-watcher
 
 %files -n %{girname}
@@ -130,7 +133,6 @@ find %{buildroot} -name '*.la' -delete
 %files -n %{develname}
 %{_includedir}/*
 %{_libdir}/libxapp.so
-%{_libdir}/gtk-3.0/modules/libxapp-gtk3-module.so
 %{_libdir}/pkgconfig/xapp.pc
 %{_datadir}/gir-1.0/XApp-1.0.gir
 %{_datadir}/glade/catalogs/xapp-glade-catalog.xml
