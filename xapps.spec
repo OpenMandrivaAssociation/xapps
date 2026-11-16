@@ -11,8 +11,8 @@
 %global __requires_exclude ^typelib\\(MatePanelApplet\\).*
 
 Name:           %{oname}
-Version:        3.4.0
-Release:        3
+Version:        3.4.2
+Release:        1
 Summary:        Common files for XApp desktop apps
 Group:          Development/Other
 License:        LGPLv2+
